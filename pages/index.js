@@ -1,7 +1,7 @@
 //Переменные
 let popup = document.querySelector('.popup');
 let popupEdit = document.querySelector('.profile__edit-button');
-let popupСlose = document.querySelector('.popup__profile-close-button');
+let popupClose = document.querySelector('.popup__profile-close-button');
 
 let formPopup = document.querySelector('.form');
 let formName = document.querySelector('.form__input-name');
@@ -14,7 +14,7 @@ function popupCloseButton() {
   if(popup){
   popup.classList.remove('popup_opened');
 }}
-popupСlose.addEventListener('click', popupCloseButton);
+popupClose.addEventListener('click', popupCloseButton);
 
 //Открыть попап через изменение класса
 function popupEditButton() {
