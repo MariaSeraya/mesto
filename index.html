@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="./pages/index.css">
+  <script src="./pages/index.js"></script> 
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mesto</title>
+</head>
+
+<body>
+  <div class="page">
+    <header class="header">
+      <a href="#"><img class="header__logo" src="./images/logo.svg" alt="Логотип страницы"></a>
+      <div class="header__line"></div>
+    </header>
+
+    <main class="content">
+      <section class="profile">
+        <div class="profile__card">
+          <div class="profile__avatar"></div>
+          <div class="profile__info">
+            <div class="profile__user">
+              <h1 class="profile__name">Жак-Ив Кусто</h1>
+              <button class="profile__edit-button" id="profile__edit-button" type="button" aria-label="Изменить профиль"></button>
+            </div>
+            <p class="profile__description">Исследователь океана</p>
+          </div>
+        </div>
+        <button class="profile__add-button" type="button" aria-label="Добавить"></button>
+      </section>
+
+      <section class="elements">
+       <ul class="elements__items">
+        <li class="element">
+          <img class="element__image" src="./images/elements/karachaevsk.jpg" alt="Изображение места">
+          <div class="element__info">
+           <h2 class="element__name">Карачаевск</h2>
+           <button class="element__like" type="button" aria-label="Нравится"></button>
+          </div>
+        </li>
+
+        <li class="element">
+         <img class="element__image" src="./images/elements/elbrus.jpg" alt="Изображение места">
+          <div class="element__info">
+           <h2 class="element__name">Гора Эльбрус</h2>
+           <button class="element__like" type="button" aria-label="Нравится"></button>
+         </div>
+        </li>
+
+        <li class="element">
+         <img class="element__image" src="./images/elements/dombaj.jpg" alt="Изображение места">
+         <div class="element__info">
+           <h2 class="element__name">Домбай</h2>
+           <button class="element__like" type="button" aria-label="Нравится"></button>
+         </div>
+        </li>
+
+       <li class="element">
+          <img class="element__image" src="./images/elements/elbrus.jpg" alt="Изображение места">
+         <div class="element__info">
+           <h2 class="element__name">Гора Эльбрус</h2>
+           <button class="element__like" type="button" aria-label="Нравится"></button>
+          </div>
+        </li>
+
+       <li class="element">
+         <img class="element__image" src="./images/elements/dombaj.jpg" alt="Изображение места">
+          <div class="element__info">
+           <h2 class="element__name">Домбай</h2>
+           <button class="element__like" type="button" aria-label="Нравится"></button>
+          </div>
+        </li>
+
+       <li class="element">
+         <img class="element__image" src="./images/elements/karachaevsk.jpg" alt="Изображение места">
+          <div class="element__info">
+           <h2 class="element__name">Карачаево-Черкесск</h2>
+           <button class="element__like" type="button" aria-label="Нравится"></button>
+          </div>
+       </li>
+      </ul>
+      </section>
+
+     </main>
+
+  <footer class="footer">
+      <p class="footer__copyright">&copy; 2020 Mesto Russia</p>
+  </footer>
+</div>
+
+<div class="popup">
+  <div class="popup__container">
+    <form class="form" name="profile-edit" novalidate>
+      <h1 class="form__title">Редактировать профиль</h1>
+      <fieldset class="form__inputs">
+        <input
+        id="form__edit-name"
+        class="form__input form__input-name"
+        name="name"
+        placeholder="Имя и фамилия"
+        type="text"
+        required minlength="1"
+        maxlength="40">
+        <div class="form__line-input"></div>
+        <input
+        id="form__edit-description"
+        class="form__input form__input-description"
+        name="description"
+        placeholder="О себе"
+        type="text"
+        required
+        minlength="2"
+        maxlength="100">
+        <div class="form__line-input"></div>
+        <button class="popup__profile-save-button" type="submit">Сохранить</button>
+      </fieldset>
+      <button class="popup__profile-close-button" id="popup__profile-close-button" type="button" aria-label="Закрыть"></button>
+    </form>
+  </div>
+</div>
+
+</body>
+</html>

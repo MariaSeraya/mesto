@@ -1,0 +1,32 @@
+.popup__profile-close-button {
+  position: absolute;
+  top: -40px;
+  right: -40px;
+  min-width: 32px;
+  min-height: 32px;
+  background-image: url(../../../images/close_button.svg);
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: center;
+  box-sizing: border-box;
+  border: none;
+  line-height: 0;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+
+.popup__profile-close-button:hover {
+  opacity: 0.5;
+}
+
+@media (max-width: 600px) {
+  .popup__profile-close-button {
+    min-width: 20px;
+    min-height: 20px;
+    top: -36px;
+    right: 19px;
+    background-image: url(../../../images/close_button-2.svg);
+  }
+}
