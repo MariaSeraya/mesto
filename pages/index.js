@@ -1,7 +1,7 @@
 //Переменные
-let popup = document.querySelector ('.popup');
+let popup = document.querySelector('.popup');
 let popupEdit = document.querySelector('.profile__edit-button');
-let popupСlose = document.querySelector ('.popup__profile-close-button');
+let popupСlose = document.querySelector('.popup__profile-close-button');
 
 let formPopup = document.querySelector('.form');
 let formName = document.querySelector('.form__input-name');
