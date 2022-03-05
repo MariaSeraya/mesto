@@ -3,8 +3,8 @@
 ###### H6 Mesto translates ap a place.
 
 **About the project:**
-* educational project (made by brief from Figma);
-* landing page for sharing pics with the ability to interact with the inrerface (profile name and description change).
+* an educational project (made by brief from Figma);
+* a landing page for sharing pics with the ability to interact with the inrerface (profile name and description change).
 
 **Used in project:**
 * adaptive layout;
