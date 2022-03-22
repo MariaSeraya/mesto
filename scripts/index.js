@@ -52,36 +52,36 @@ const elementImgDescription = document.querySelector('.popup__description');
 const elementsItems = document.querySelector('.elements__items');
 
 //Close a popup
-function popupClose(popup) {
+function closePopup(popup) {
   popup.classList.remove('popup_opened');
 }
 
 closeButtonProfileEdit.addEventListener('click', () => {
-  popupClose(popupProfileEdit);
+  closePopup(popupProfileEdit);
 });
 
 closeButtonCardAdd.addEventListener('click', () => {
-  popupClose(popupCardAdd);
+  closePopup(popupCardAdd);
 });
 
 closeButtonImgCardView.addEventListener('click', () => {
-  popupClose(popupImgCardView);
+  closePopup(popupImgCardView);
 });
 
 
 //Open a popup
-function popupOpen(popup) {
+function openPopup(popup) {
   popup.classList.add('popup_opened');
 }
 
 editProfileButton.addEventListener('click', () => {
-  popupOpen(popupProfileEdit);
+  openPopup(popupProfileEdit);
   formUserName.value = profileUserName.textContent;
   formUserDescription.value = profileUserDescription.textContent;
 });
 
 addCardButton.addEventListener('click', () => {
-  popupOpen(popupCardAdd);
+  openPopup(popupCardAdd);
 });
 
 
@@ -99,7 +99,7 @@ function renderCard(card) {
 
   //View
   elementImg.addEventListener('click', (evt) => {
-    popupOpen(popupImgCardView);
+    openPopup(popupImgCardView);
     elementImgDescription.textContent = evt.target.alt;
     elementImgCardView.alt = evt.target.alt;
     elementImgCardView.src = evt.target.src;
@@ -125,23 +125,23 @@ allCards.forEach((item) => elementsItems.append(item));
 
 
 //Save user data in the profile
-function formProfileEditSubmit (evt) {
+function saveFormProfileEditSubmit (evt) {
   evt.preventDefault();
   profileUserName.textContent = formUserName.value;
   profileUserDescription.textContent = formUserDescription.value;
-  popupClose(popupProfileEdit);
+  closePopup(popupProfileEdit);
   }
-formPopupProfileEdit.addEventListener('submit', formProfileEditSubmit);
+formPopupProfileEdit.addEventListener('submit', saveFormProfileEditSubmit);
 
 
 //Save data in the card
-function formCardAddSubmit (evt) {
+function saveFormCardAddSubmit (evt) {
   evt.preventDefault();
   const dataCard = {
     name: formCardName.value,
     link: formCardImgLink.value,
   }
   elementsItems.prepend(renderCard(dataCard));
-  popupClose(popupCardAdd);
+  closePopup(popupCardAdd);
   }
-formPopupAddCard.addEventListener('submit', formCardAddSubmit);
+formPopupAddCard.addEventListener('submit', saveFormCardAddSubmit);
