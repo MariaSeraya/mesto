@@ -75,9 +75,9 @@ function openPopup(popup) {
 }
 
 editProfileButton.addEventListener('click', () => {
-  openPopup(popupProfileEdit);
   formUserName.value = profileUserName.textContent;
   formUserDescription.value = profileUserDescription.textContent;
+  openPopup(popupProfileEdit);
 });
 
 addCardButton.addEventListener('click', () => {
@@ -90,8 +90,10 @@ function renderCard(card) {
   const elementTemplate = document.querySelector('.element__template').content;
   const element = elementTemplate.querySelector('.element').cloneNode(true);
   const elementInfo = element.querySelector('.element__info');
-  const elementImg = element.querySelector('.element__image');
   const elementName = elementInfo.querySelector('.element__name');
+  const elementImgBox = element.querySelector('.element__img-box');
+  const elementImg = elementImgBox.querySelector('.element__image');
+  
 
   elementImg.alt = card.name;
   elementImg.src = card.link;
@@ -99,10 +101,10 @@ function renderCard(card) {
 
   //View
   elementImg.addEventListener('click', (evt) => {
-    openPopup(popupImgCardView);
     elementImgDescription.textContent = evt.target.alt;
     elementImgCardView.alt = evt.target.alt;
     elementImgCardView.src = evt.target.src;
+    openPopup(popupImgCardView);
   });
   
   //Delete card
@@ -143,5 +145,6 @@ function saveFormCardAddSubmit (evt) {
   }
   elementsItems.prepend(renderCard(dataCard));
   closePopup(popupCardAdd);
+  formPopupAddCard.reset();
   }
 formPopupAddCard.addEventListener('submit', saveFormCardAddSubmit);

@@ -1,6 +1,7 @@
 .page {
   background-color: #000;
   min-width: 320px;
+  height: 100%;
   margin: 0 auto;
   line-height: 0;
   /*Сглаживание шрифтов*/
