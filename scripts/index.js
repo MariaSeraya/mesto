@@ -46,11 +46,10 @@ const formUserDescription = document.querySelector('.form__input-description');
 const formCardName = document.querySelector('.form__input-name_card');
 const formCardImgLink = document.querySelector('.form__input-description_card');
 
-const elementsItems = document.querySelector('.elements__items');
-
 const elementImgCardView = document.querySelector('.popup__img-card');
 const elementImgDescription = document.querySelector('.popup__description');
 
+const elementsItems = document.querySelector('.elements__items');
 
 //Close a popup
 function popupClose(popup) {
@@ -112,7 +111,7 @@ function renderCard(card) {
     element.remove();
   });
 
-  //Like card (не находит файл, ищет по пути Desktop/dev/mesto/blocks/images/like_active.svg)
+  //Like card
   const likeButton = elementInfo.querySelector('.element__like');
   likeButton.addEventListener('click', () => {
     likeButton.classList.toggle('element__like_active');
