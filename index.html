@@ -33,54 +33,7 @@
 
       <section class="elements">
        <ul class="elements__items">
-        <li class="element">
-          <img class="element__image" src="./images/elements/karachaevsk.jpg" alt="Изображение места">
-          <div class="element__info">
-           <h2 class="element__name">Карачаевск</h2>
-           <button class="element__like" type="button" aria-label="Нравится"></button>
-          </div>
-        </li>
-
-        <li class="element">
-         <img class="element__image" src="./images/elements/elbrus.jpg" alt="Изображение места">
-          <div class="element__info">
-           <h2 class="element__name">Гора Эльбрус</h2>
-           <button class="element__like" type="button" aria-label="Нравится"></button>
-         </div>
-        </li>
-
-        <li class="element">
-         <img class="element__image" src="./images/elements/dombaj.jpg" alt="Изображение места">
-         <div class="element__info">
-           <h2 class="element__name">Домбай</h2>
-           <button class="element__like" type="button" aria-label="Нравится"></button>
-         </div>
-        </li>
-
-       <li class="element">
-          <img class="element__image" src="./images/elements/elbrus.jpg" alt="Изображение места">
-         <div class="element__info">
-           <h2 class="element__name">Гора Эльбрус</h2>
-           <button class="element__like" type="button" aria-label="Нравится"></button>
-          </div>
-        </li>
-
-       <li class="element">
-         <img class="element__image" src="./images/elements/dombaj.jpg" alt="Изображение места">
-          <div class="element__info">
-           <h2 class="element__name">Домбай</h2>
-           <button class="element__like" type="button" aria-label="Нравится"></button>
-          </div>
-        </li>
-
-       <li class="element">
-         <img class="element__image" src="./images/elements/karachaevsk.jpg" alt="Изображение места">
-          <div class="element__info">
-           <h2 class="element__name">Карачаево-Черкесск</h2>
-           <button class="element__like" type="button" aria-label="Нравится"></button>
-          </div>
-       </li>
-      </ul>
+       </ul>
       </section>
 
      </main>
@@ -90,9 +43,21 @@
   </footer>
 </div>
 
-<div class="popup">
+
+<template class="element__template" id="element">
+  <li class="element">
+    <img class="element__image" src="#" alt="Изображение места">
+    <button class="element__delete-button" type="button" aria-label="Удалить"></button>
+     <div class="element__info">
+      <h2 class="element__name"></h2>
+      <button class="element__like" type="button" aria-label="Нравится"></button>
+     </div>
+  </li>
+</template>
+
+<div class="popup popup_profile-info">
   <div class="popup__container">
-    <form class="form" name="profile-edit" novalidate>
+    <form class="form form_profile-info" name="profile-edit" novalidate>
       <h2 class="form__title">Редактировать профиль</h2>
       <input
         id="form__edit-name"
@@ -100,7 +65,8 @@
         name="name"
         placeholder="Имя и фамилия"
         type="text"
-        required minlength="1"
+        required
+        minlength="1"
         maxlength="40">
       <div class="form__line-input"></div>
       <input
@@ -113,11 +79,48 @@
         minlength="2"
         maxlength="100">
       <div class="form__line-input"></div>
-      <button class="popup__profile-save-button" type="submit">Сохранить</button>
-      <button class="popup__profile-close-button" id="popup__profile-close-button" type="button" aria-label="Закрыть"></button>
+      <button class="popup__save-button popup__save-button_profile" type="submit">Сохранить</button>
+      <button class="popup__close-button popup__close-button_profile" id="popup__close-button" type="button" aria-label="Закрыть"></button>
     </form>
   </div>
 </div>
+
+<div class="popup popup_card-add">
+  <div class="popup__container">
+    <form class="form form_card-add" name="add-card" novalidate>
+      <h2 class="form__title">Новое место</h2>
+      <input
+        id="form__add-name"
+        class="form__input form__input-name form__input-name_card"
+        name="name"
+        placeholder="Название"
+        type="text"
+        required
+        minlength="2"
+        maxlength="40">
+      <div class="form__line-input"></div>
+      <input
+        id="form__add-about"
+        class="form__input form__input-description form__input-description_card"
+        name="about"
+        placeholder="Ссылка на изображение"
+        type="url"
+        required>
+      <div class="form__line-input"></div>
+      <button class="popup__save-button popup__save-button_add" type="submit">Сохранить</button>
+      <button class="popup__close-button popup__close-button_add" id="popup__close-button" type="button" aria-label="Закрыть"></button>
+    </form>
+  </div>
+</div>
+
+<div class="popup popup_img-card-view">
+  <div class="popup__container">
+    <img class="popup__img-card" src="#" alt="Изображение места">
+    <p class="popup__description">Новое место</p>
+    <button class="popup__close-button popup__close-button_view" id="popup__close-button" type="button" aria-label="Закрыть"></button>
+  </div>
+</div>
+
 
 <script src="./scripts/index.js"></script> 
 </body>
