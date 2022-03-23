@@ -1,6 +1,6 @@
 # Mesto
 ### The third project completed on the course of web-developers from Practicum by Yandex
-###### H6 Mesto translates ap a place.
+###### Mesto translates as a place.
 
 **About the project:**
 * an educational project (made by brief from Figma);
