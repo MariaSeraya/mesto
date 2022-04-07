@@ -175,15 +175,15 @@ const showInputError = (formElement, inputElement, errorMessage, inputErrorClass
   const errorElement = formElement.querySelector(`.${inputElement.id}-error`);
   inputElement.classList.add(inputErrorClass);
   errorElement.textContent = errorMessage;
-  formError.classList.add(errorClass);
+  errorElement.classList.add(errorClass);
 }
 
 //Hide errors
 const hideInputError = (formElement, inputElement, inputErrorClass) => {
   const errorElement = formElement.querySelector(`.${inputElement.id}-error`);
   inputElement.classList.remove(inputErrorClass);
+  errorElement.classList.remove(errorClass);
   errorElement.textContent = '';
-  formError.classList.remove(errorClass);
 }
 
 //Validation check
