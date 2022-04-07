@@ -174,8 +174,8 @@ saveCardButton.disabled = true;
 const showInputError = (formElement, inputElement, errorMessage, inputErrorClass) => {
   const errorElement = formElement.querySelector(`.${inputElement.id}-error`);
   inputElement.classList.add(inputErrorClass);
-  errorElement.textContent = errorMessage;
   errorElement.classList.add(errorClass);
+  errorElement.textContent = errorMessage;
 }
 
 //Hide errors
