@@ -57,7 +57,7 @@
 
 <div class="popup popup_profile-info">
   <div class="popup__container">
-    <form class="form form_profile-info" name="profile-edit" novalidate>
+    <form class="form form_profile-info" name="profile-edit" autocomplete="off" novalidate>
       <h2 class="form__title">Редактировать профиль</h2>
       <input
         id="form__edit-name"
@@ -66,9 +66,9 @@
         placeholder="Имя и фамилия"
         type="text"
         required
-        minlength="1"
+        minlength="2"
         maxlength="40">
-      <div class="form__line-input"></div>
+      <span id="form__input-name-error" class="form__error form__input-name-error"></span>
       <input
         id="form__edit-description"
         class="form__input form__input-description"
@@ -77,8 +77,8 @@
         type="text"
         required
         minlength="2"
-        maxlength="100">
-      <div class="form__line-input"></div>
+        maxlength="200">
+      <span id="form__edit-descriptio-error" class="form__error form__edit-descriptio-error"></span>
       <button class="popup__save-button popup__save-button_profile" type="submit">Сохранить</button>
       <button class="popup__close-button popup__close-button_profile" id="popup__close-button_profile" type="button" aria-label="Закрыть"></button>
     </form>
@@ -97,8 +97,8 @@
         type="text"
         required
         minlength="2"
-        maxlength="40">
-      <div class="form__line-input"></div>
+        maxlength="30">
+      <span id="form__add-name-error" class="form__error form__add-name-error"></span>
       <input
         id="form__add-about"
         class="form__input form__input-description form__input-description_card"
@@ -106,8 +106,8 @@
         placeholder="Ссылка на изображение"
         type="url"
         required>
-      <div class="form__line-input"></div>
-      <button class="popup__save-button popup__save-button_add" type="submit">Сохранить</button>
+      <span id="form__add-about-error" class="form__error form__add-name-error"></span>
+      <button class="popup__save-button popup__save-button_add" type="submit">Создать</button>
       <button class="popup__close-button popup__close-button_add" id="popup__close-button_add" type="button" aria-label="Закрыть"></button>
     </form>
   </div>

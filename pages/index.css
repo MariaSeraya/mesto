@@ -37,10 +37,14 @@
  @import url(../blocks/form/form.css);
  @import url(../blocks/form/__title/form__title.css);
  @import url(../blocks/form/__input/form__input.css);
+ @import url(../blocks/form/__input/_type/form__input_type_error.css);
+ @import url(../blocks/form/__error/form__error.css);
+ @import url(../blocks/form/__error/_visible/form__error_visible.css);
  @import url(../blocks/form/__input-name/form__input-name.css);
  @import url(../blocks/form/__input-description/form__input-description.css);
  @import url(../blocks/form/__line-input/form__line-input.css);
  @import url(../blocks/popup/__save-button/popup__save-button.css);
+ @import url(../blocks/popup/__save-button/_disabled/popup__save-button_disabled.css);
  @import url(../blocks/popup/__close-button/popup__close-button.css);
  /*Popup img card view*/
  @import url(../blocks/popup/__img-card/popup__img-card.css);

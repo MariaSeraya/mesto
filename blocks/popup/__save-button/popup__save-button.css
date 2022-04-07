@@ -13,13 +13,13 @@
   box-sizing: border-box;
   border: none;
   border-radius: 2px;
-  margin: 48px 36px 37px 36px;
+  margin: 36.34px 0 0 0;
   padding: 0;
   cursor: pointer;
   transition: opacity 0.3s ease;
 }
 
-.popup__save-button:hover {
+.popup__save-button:not([disabled]):hover {
   opacity: 0.5;
 }
 
@@ -29,6 +29,6 @@
     min-height: 46px;
     font-size: 14px;
     line-height: 17px;
-    margin: 45px 22px 25px 22px;
+    margin: 36.34px 0 0 0;
   }
 }
