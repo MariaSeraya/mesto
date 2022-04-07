@@ -8,7 +8,7 @@
   font-weight: 900;
   color: #000;
   margin: 0 auto 0 0;
-  padding: 34px 64px 54px 36px;
+  padding: 0 0 54px 0;
   margin-block-start: 0;
   margin-block-end: 0;
 }
@@ -20,6 +20,6 @@
    font-size: 18px;
    line-height: 22px;
    margin: 0 auto 0 auto;
-   padding: 25px 22px 75px 22px;
+   padding: 0 0 75px 0;
   }
 }

@@ -1,6 +1,6 @@
 .form {
-  min-width: 430px;
-  min-height: 330px;
+  max-width: 430px;
+  max-height: 330px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -10,12 +10,13 @@
   box-sizing: border-box;
   border-radius: 10px;
   margin: 0;
-  padding: 0;
+  padding: 34px 36px 36.51px 36px;
 }
 
 @media (max-width: 600px) {
   .form {
     min-width: 282px;
     min-height: 322px;
+    padding: 25px 22px 25px 22px;
   }
 }

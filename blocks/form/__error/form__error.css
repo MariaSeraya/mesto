@@ -1,5 +1,5 @@
 .form__error { 
-  min-width: 358px;
+  max-width: 358px;
   min-height: 12px;
   font-family: 'Inter', Arial, Helvetica, sans-serif;
   font-size: 12px;
@@ -8,8 +8,14 @@
   color: #f00;
   text-align: left;
   display: block;
-  margin: 0;
+  margin: 5px auto 0 0;
   box-sizing: border-box;
   transition: opacity 0.3s;
   opacity: 0;
+}
+
+@media (max-width: 600px) {
+  .form__error {
+    min-width: 238px;
+  }
 }

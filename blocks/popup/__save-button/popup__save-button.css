@@ -13,7 +13,7 @@
   box-sizing: border-box;
   border: none;
   border-radius: 2px;
-  margin: 36.34px 0 0 0;
+  margin: 31.34px 0 0 0;
   padding: 0;
   cursor: pointer;
   transition: opacity 0.3s ease;
@@ -29,6 +29,6 @@
     min-height: 46px;
     font-size: 14px;
     line-height: 17px;
-    margin: 36.34px 0 0 0;
+    margin: 28.34px 0 0 0;
   }
 }
