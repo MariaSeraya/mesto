@@ -61,24 +61,24 @@
       <h2 class="form__title">Редактировать профиль</h2>
       <input
         id="username-input"
-        class="form__input form__input-name"
+        class="form__input form__input-name username-input"
         name="username"
         placeholder="Имя и фамилия"
         type="text"
         required
         minlength="2"
         maxlength="40">
-      <span id="username-input-error" class="form__error form__input-name-error"></span>
+      <span id="username-input-error" class="form__error username-input-error"></span>
       <input
         id="description-input"
-        class="form__input form__input-description"
+        class="form__input form__input-description description-input"
         name="description"
         placeholder="О себе"
         type="text"
         required
         minlength="2"
         maxlength="200">
-      <span id="description-input-error" class="form__error form__edit-descriptio-error"></span>
+      <span id="description-input-error" class="form__error description-input-error"></span>
       <button class="popup__save-button popup__save-button_profile" type="submit">Сохранить</button>
       <button class="popup__close-button popup__close-button_profile" id="popup__close-button_profile" type="button" aria-label="Закрыть"></button>
     </form>
@@ -90,23 +90,23 @@
     <form class="form form_card-add" name="add-card" novalidate>
       <h2 class="form__title">Новое место</h2>
       <input
-        id="placename-input"
-        class="form__input form__input-name form__input-name_card"
-        name="placename"
+        id="place-input"
+        class="form__input form__input-name form__input-name_card place-input"
+        name="place"
         placeholder="Название"
         type="text"
         required
         minlength="2"
         maxlength="30">
-      <span id="place-input-error" class="place-input-error form__error"></span>
+      <span id="place-input-error" class="form__error place-input-error"></span>
       <input
-        id="img-input"
-        class="form__input form__input-description form__input-description_card"
+        id="link-input"
+        class="form__input form__input-description form__input-description_card link-input"
         name="img-link"
         placeholder="Ссылка на изображение"
         type="url"
         required>
-      <span id="link-input-error" class="link-input-error form__error"></span>
+      <span id="link-input-error" class="form__error link-input-error"></span>
       <button class="popup__save-button popup__save-button_add" type="submit">Создать</button>
       <button class="popup__close-button popup__close-button_add" id="popup__close-button_add" type="button" aria-label="Закрыть"></button>
     </form>
