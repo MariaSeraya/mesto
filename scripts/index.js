@@ -1,30 +1,3 @@
-const initialCards = [
-  {
-    name: 'Архыз',
-    link: 'https://i.imgur.com/W8yJFhR.jpg'
-  },
-  {
-    name: 'Челябинская область',
-    link: 'https://i.imgur.com/u4o7H3E.jpg'
-  },
-  {
-    name: 'Иваново',
-    link: 'https://i.imgur.com/3hGgk5O.jpg'
-  },
-  {
-    name: 'Камчатка',
-    link: 'https://i.imgur.com/xotlE9n.jpg'
-  },
-  {
-    name: 'Холмогорский район',
-    link: 'https://i.imgur.com/VlbWZ4b.jpg'
-  },
-  {
-    name: 'Байкал',
-    link: 'https://i.imgur.com/YFbzfsI.jpg'
-  }
-];
-
 const popupProfileEdit = document.querySelector('.popup_profile-info');
 const popupCardAdd = document.querySelector('.popup_card-add');
 const popupImgCardView = document.querySelector('.popup_img-card-view');
@@ -47,6 +20,7 @@ const formCardImgLink = document.querySelector('.form__input-description_card');
 const elementImgCardView = document.querySelector('.popup__img-card');
 const elementImgDescription = document.querySelector('.popup__description');
 
+const elementTemplate = document.querySelector('.element__template').content;
 const elementsItems = document.querySelector('.elements__items');
 
 
@@ -83,7 +57,7 @@ function openPopup(popup) {
 }
 
 editProfileButton.addEventListener('click', () => {
-  userData();
+  setUserData();
   openPopup(popupProfileEdit);
 });
 
@@ -95,7 +69,6 @@ addCardButton.addEventListener('click', () => {
 
 //Work with cards: create, show, delete and like
 function renderCard(card) {
-  const elementTemplate = document.querySelector('.element__template').content;
   const element = elementTemplate.querySelector('.element').cloneNode(true);
   const elementInfo = element.querySelector('.element__info');
   const elementName = elementInfo.querySelector('.element__name');
@@ -130,14 +103,14 @@ function renderCard(card) {
   return element;
 }
 
-const allCards = initialCards.map(renderCard);
-allCards.forEach((item) => elementsItems.append(item));
-userData();
+initialCards.forEach((item)=>{
+  elementsItems.append(renderCard(item))
+}) 
 
 
 
 //Save user data in the profile
-function userData() {
+function setUserData() {
   formUserName.value = profileUserName.textContent;
   formUserDescription.value = profileUserDescription.textContent;
 }
@@ -162,9 +135,7 @@ function saveFormCardAddSubmit (evt) {
   elementsItems.prepend(renderCard(dataCard));
   closePopup(popupCardAdd);
   formPopupAddCard.reset();
+  saveCardButton.classList.add('popup__save-button_disabled');
+  saveCardButton.disabled = true;
   }
 formPopupAddCard.addEventListener('submit', saveFormCardAddSubmit);
-
-
-saveCardButton.classList.add('popup__save-button_disabled');
-saveCardButton.disabled = true;

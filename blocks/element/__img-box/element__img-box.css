@@ -2,4 +2,9 @@
   width: 282px;
   height: 282px;
   background-color: #000;
+  transition: opacity 0.3s ease;
+}
+
+.element__img-box:hover {
+  opacity: 0.6;
 }
