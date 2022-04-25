@@ -1,5 +1,5 @@
-import FormValidator from './formValidator.js';
-import Card from './card.js';
+import FormValidator from './FormValidator.js';
+import Card from './Card.js';
 import {initialCards} from './initialCards.js';
 import {
   popupProfileEdit,
@@ -114,22 +114,24 @@ function saveFormCardAddSubmit (evt) {
   renderCard(dataCard);
   closePopup(popupCardAdd);
   formPopupAddCard.reset();
-  saveCardButton.classList.add('popup__save-button_disabled');
-  saveCardButton.disabled = true;
   }
 formPopupAddCard.addEventListener('submit', saveFormCardAddSubmit);
 
 
+//Create cards
+function createCard(dataCard) {
+  const addNewCard = new Card(dataCard, elementTemplate, openImgCardView);
+  const element = addNewCard.generateCard();
+  return element;
+}
 
 //Render cards
 function renderCard(dataCard) {
-  const addNewCard = new Card(dataCard, elementTemplate, openImgCardView);
-  const element = addNewCard._generateCard();
-  elementsItems.prepend(element);
+  elementsItems.prepend(createCard(dataCard));
 }
 
 initialCards.reverse().forEach((card)=>{
-  renderCard(card);
+  renderCard(card, elementTemplate);
 })
 
 
