@@ -59,13 +59,13 @@ function openPopup(popup) {
 //Open a profile popup
 editProfileButton.addEventListener('click', () => {
   setUserData();
-  validationProfile.resetErrors();
+  validationProfile.resetValidation();
   openPopup(popupProfileEdit);
 });
 
 //Open an add-card popup
 addCardButton.addEventListener('click', () => {
-  validationCardAdd.resetErrors();
+  validationCardAdd.resetValidation();
   openPopup(popupCardAdd);
 });
 
