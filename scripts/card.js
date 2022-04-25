@@ -70,5 +70,4 @@ _clickButtonDelete(){
 _clickButtonLike(){
   this._likeButton.classList.toggle('element__like_active');
 }
-
 }
