@@ -35,7 +35,7 @@ _checkInputValidity (inputElement) {
   };
 }
 
-//Check all inputs and signal
+//Check all inputs and signals
 _hasInvalidInput() {
   return this._inputElements.some((inputElement) => {
     return !inputElement.validity.valid;

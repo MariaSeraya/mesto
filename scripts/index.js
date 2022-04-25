@@ -59,13 +59,13 @@ function openPopup(popup) {
 //Open a profile popup
 editProfileButton.addEventListener('click', () => {
   setUserData();
-  validatorProfile.resetErrors();
+  validationProfile.resetErrors();
   openPopup(popupProfileEdit);
 });
 
 //Open an add-card popup
 addCardButton.addEventListener('click', () => {
-  validatorCardAdd.resetErrors();
+  validationCardAdd.resetErrors();
   openPopup(popupCardAdd);
 });
 
@@ -80,11 +80,11 @@ function openImgCardView(link, name) {
 
 
 //Popups validation check
-const validatorProfile = new FormValidator(dataElement, popupProfileEdit);
-validatorProfile.enableValidation();
+const validationProfile = new FormValidator(dataElement, popupProfileEdit);
+validationProfile.enableValidation();
 
-const validatorCardAdd = new FormValidator(dataElement, popupCardAdd);
-validatorCardAdd.enableValidation();
+const validationCardAdd = new FormValidator(dataElement, popupCardAdd);
+validationCardAdd.enableValidation();
 
 
 
